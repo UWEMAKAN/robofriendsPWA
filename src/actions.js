@@ -12,8 +12,18 @@ export const setSearchField = (text) => ({
 
 export const requestRobots = () => (dispatch) => {
   dispatch({ type: REQUEST_ROBOTS_PENDING });
-  fetch('http://jsonplaceholder.typicode.com/users')
+  fetch('https://swapi.co/api/people/')
     .then(response => response.json())
-    .then(data => dispatch({ type: REQUEST_ROBOTS_SUCCESS, payload: data }))
+    .then(({results}) => {
+      console.log(results)
+;      return dispatch({ type: REQUEST_ROBOTS_SUCCESS, payload: results })
+    })
     .catch(error => dispatch({ type: REQUEST_ROBOTS_FAILED, payload: error }));
+//   fetch('http://jsonplaceholder.typicode.com/users')
+//     .then(response => response.json())
+//     .then(data => {
+//       console.log(data)
+// ;      return dispatch({ type: REQUEST_ROBOTS_SUCCESS, payload: data })
+//     })
+//     .catch(error => dispatch({ type: REQUEST_ROBOTS_FAILED, payload: error }));
 }
