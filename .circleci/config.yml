@@ -1,13 +1,5 @@
 version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/node:12.16
-    steps:
-      - checkout
-      - run: echo "install dependencies"
-      - run: npm install
-      - run: npm run build
   test:
     docker:
       - image: circleci/node:12.16
@@ -16,16 +8,19 @@ jobs:
       - run: echo "Running tests"
       - run: npm install
       - run: npm test
-  hithere:
+  build:
     docker:
       - image: circleci/node:12.16
     steps:
       - checkout
-      - run: echo "hello"
+      - run: echo "build project"
+      - run: npm install
+      - run: npm run build
 workflows:
   version: 2
-  build_and_test:
+  test_and_build:
     jobs:
-      - build
-      - hithere
       - test
+      - build:
+        requires:
+          - test
