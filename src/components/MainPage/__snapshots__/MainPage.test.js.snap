@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage Container Component expect to render MainPage Container Component 1`] = `
+<div
+  className="tc"
+>
+  <h1
+    className="Heading f1"
+  >
+    RoboFriends
+  </h1>
+  <searchBox
+    changed={[MockFunction]}
+  />
+  <CounterButton
+    color="steelblue"
+  />
+  <scroll>
+    <ErrorBoundary>
+      <cardList
+        robots={Array []}
+      />
+    </ErrorBoundary>
+  </scroll>
+</div>
+`;

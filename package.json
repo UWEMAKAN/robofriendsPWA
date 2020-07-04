@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
     "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -41,7 +42,16 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "fetch-mock": "9.3.1",
+    "fetch-mock-jest": "^1.2.5",
+    "moxios": "^0.4.0",
+    "node-fetch": "^2.6.0",
+    "redux-mock-store": "^1.5.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/UWEMAKAN/robofriendsPWA.git"

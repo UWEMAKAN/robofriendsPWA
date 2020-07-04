@@ -1,0 +1,7 @@
+.CounterButton {
+  outline: none;
+  cursor: pointer;
+  background-color: #CDECFF;
+  padding: 20px 40px;
+  font-size: 20px;
+}
